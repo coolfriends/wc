@@ -1,0 +1,25 @@
+service: wc
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: us-west-2
+  memorySize: 128
+  timeout: 30
+  environment:
+    WC_SECRET_KEY: ${env:WC_SECRET_KEY}
+
+functions: ${file(.serverless_config/functions.yml)}
+
+
+resources:
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+
+custom:
+  wsgi:
+    app: wc.app
+    packRequirements: false

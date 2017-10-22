@@ -1,0 +1,5 @@
+wc:
+  handler: wsgi.handler
+  events:
+    -
+      http: ANY {proxy+}

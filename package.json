@@ -1,0 +1,19 @@
+{
+  "name": "wc",
+  "version": "0.0.1",
+  "description": "A word counting REST API in Flask",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "serverless-python-requirements": "^3.0.7",
+    "serverless-wsgi": "^1.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kyri Vanderpoel",
+  "license": "ISC"
+}
