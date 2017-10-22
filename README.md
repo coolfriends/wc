@@ -42,7 +42,17 @@ python -m unittest
 ```
 
 ## Start
-Deploy to AWS
+### Serve the Flask app locally (without serverless)
+```bash
+FLASK_APP=wc/__init__.py flask run
+```
+
+### Serve the app locally with serverless-wsgi
+```bash
+sls wsgi serve
+```
+
+### Deploy to AWS
 ```bash
 sls deploy
 ```
